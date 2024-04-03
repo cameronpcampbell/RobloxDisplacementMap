@@ -1,16 +1,14 @@
 # RobloxDisplacementMap
 
 # Example Usage
-Add a string attribute called `HeightMap` to a surface appearance. Set its value to a roblox asset id (e.g `"rbxassetid://12345"`).
+Add a string attribute called `HeightMap` to a surface appearance. Set its value to a roblox asset id (e.g `"rbxassetid://12345"`). Add this SurfaceAppearance to the MeshPart that you want to displace.
 
 ```lua
 local RobloxDisplacementMap = require(--[[path to module here]])
 
 RobloxDisplacementMap(
-  100 -- resolution: higher number == more tris
-  .5 -- scale: the scale of the displaced geometry.
-  5 -- amplitude: higher number == stronger/higher displacement.
-  workspace.MySurfaceAppearance -- surfaceAppearance: the surface appearance to displace.
+  workspace.MeshPart, -- baseMesh [MeshPart]: The Mesh To Displace.
+  8 -- amplitude [Number]: The strength of the displacement
 )
 ```
 
